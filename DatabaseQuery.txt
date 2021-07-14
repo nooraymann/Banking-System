@@ -1,0 +1,55 @@
+CREATE TABLE `bankaccount` (
+  `BankAccountID` int NOT NULL,
+  `BACreationDate` date DEFAULT NULL,
+  `BACurrentBalance` float DEFAULT NULL,
+  `CustomerID` int DEFAULT NULL,
+  PRIMARY KEY (`BankAccountID`),
+  UNIQUE KEY `BankAccountID_UNIQUE` (`BankAccountID`),
+  UNIQUE KEY `CustomerID_UNIQUE` (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `banktransaction` (
+  `BankTransactionID` int NOT NULL,
+  `BTCreationDate` date DEFAULT NULL,
+  `BTAmount` float DEFAULT NULL,
+  `BTFromAccount` int DEFAULT NULL,
+  `BTToAccount` int DEFAULT NULL,
+  PRIMARY KEY (`BankTransactionID`),
+  UNIQUE KEY `BankTransactionID_UNIQUE` (`BankTransactionID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `customer` (
+  `CustomerID` int NOT NULL,
+  `CustomerName` varchar(45) DEFAULT NULL,
+  `CustomerAddress` varchar(45) DEFAULT NULL,
+  `CustomerMobile` int DEFAULT NULL,
+  `CustomerPass` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`CustomerID`),
+  UNIQUE KEY `CustomerID_UNIQUE` (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `project_schema`.`customer`
+(`CustomerID`,
+`CustomerName`,
+`CustomerAddress`,
+`CustomerMobile`,
+`CustomerPass`)
+VALUES
+(1,
+"Noor",
+"123 street",
+01020954565,
+"noor");
+INSERT INTO `project_schema`.`customer`
+(`CustomerID`,
+`CustomerName`,
+`CustomerAddress`,
+`CustomerMobile`,
+`CustomerPass`)
+VALUES
+(2,
+"customer",
+"11 street",
+00000000000,
+"customer");
+

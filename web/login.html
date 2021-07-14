@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Banking System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .id{ position:absolute; 
+                 left:310px; 
+                 top:150px;
+                 border-radius: 25px; 
+                 border: 2px ; 
+                 padding: 11px; 
+                 width: 12em 
+            }
+            .pass{position:absolute; 
+                  left:310px; 
+                  top:200px;
+            border-radius: 25px; 
+            border: 2px ; 
+            padding: 11px;
+            width: 12em }
+            
+            .welcome{position:absolute; 
+                     left:300px; 
+                     top:75px;
+                     color: white;
+                     font-size:50px;
+                font-family: Helvetica;
+                    
+            }
+            .button{position:absolute; 
+                    left:335px; 
+                    top:250px;
+                    width: 13em;
+                    width:9em;
+                    border-radius:25px; 
+                    border:2px ;
+                    padding:11px;
+            }
+            body {
+              background-image: url('money.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+             
+            }
+            </style>
+        </head>
+        <body>
+            <form action="Validate" method="post">
+                <div class="welcome">Welcome </div>
+                <input class="id" type="number" name="id" placeholder="ID">
+            <br><br>
+            <input class="pass" type="Password" name="pass" placeholder="Password">
+            <input class="button" type="submit" value="login">
+           
+           
+        </form>
+    </body>
+</html>
